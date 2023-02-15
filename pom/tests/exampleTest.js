@@ -3,7 +3,7 @@ import { common } from "../data.js/common";
 import examplePage from "../pages/examplePage";
 import thankYouPage from "../pages/thankYouPage";
 
-fixture`Example test`
+fixture`Example Page test suit`
     .page`${examplePage.url}`
 
 test('Validate that Submit is not enabled without a value for name', async t => {
