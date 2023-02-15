@@ -8,7 +8,7 @@ fixture`Example Page test suit`
 
 test('Validate that Submit is not enabled without a value for name', async t => {
     await t.expect(examplePage.nameInput.innerText).eql('');
-    await t.expect(examplePage.submitButtonDisabled.exists).ok();
+    await t.expect(examplePage.submitButton.withAttribute('disabled', 'disabled').exists).ok();
 })
 
 test('Send form after fill information', async t => {
@@ -26,7 +26,7 @@ test('Send form after fill information', async t => {
     await t
         .click(examplePage.preferredInterfaceSelect)
         .click(examplePage.preferredInterfaceSelectOption.withText('JavaScript API'));
-    await t.click(examplePage.submitButtonEnabled);
+    await t.click(examplePage.submitButton);
     await t.expect(getLocation()).contains(thankYouPage.url);
     await t.expect(thankYouPage.thankYouHeader.exists).ok()
 });

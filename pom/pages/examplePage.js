@@ -13,7 +13,6 @@ class examplePage {
         this.macosRadio = Selector('input').withAttribute('data-testid', 'macos-radio');
         this.preferredInterfaceSelect = Selector('select').withAttribute('data-testid', 'preferred-interface-select');
         this.preferredInterfaceSelectOption = this.preferredInterfaceSelect.find('option');
-        this.submitButtonDisabled = Selector('button').withAttribute('data-testid', 'submit-button').withAttribute('disabled', 'disabled');
-        this.submitButtonEnabled = Selector('button').withAttribute('data-testid', 'submit-button');
+        this.submitButton = Selector('button').withAttribute('data-testid', 'submit-button');
     }
 } export default new examplePage
